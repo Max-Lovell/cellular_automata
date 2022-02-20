@@ -1,0 +1,54 @@
+* {margin:0} /* to remove the top and left whitespace */
+
+
+
+#instructions{
+    color:#000;
+    font-family:arial;
+    font-size: 30px;
+    
+    position: absolute;
+    top: 10%;
+    width:80%;
+    text-align: center;
+}
+
+.fade-out {
+    display: block;
+    animation: fade-out 3s;
+    opacity: 0;
+}
+
+@keyframes fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+
+#user_form {
+    display: grid;
+    grid-template-columns: repeat(2, min-content);
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    font-family: Sans-serif;
+    font-size: 15px;
+    color: white;
+    /*text-shadow: -1px -1px 0    rgb(255, 255, 255), 1px -1px 0 rgb(255, 255, 255), -1px 1px 0 rgb(255, 255, 255), 1px 1px 0 rgb(255, 255, 255);*/
+}
+
+.rule {
+    cursor: pointer;
+    border: none;
+}
+
+.rule:hover {
+    background-color: darkgrey;
+    color: white;
+}
+
+#rule_list{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}

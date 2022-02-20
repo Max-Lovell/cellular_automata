@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en-GB'>
+<head>
+    <title>Conway's Game of Life</title>
+    <link rel="stylesheet" href="conway.css">
+</head>
+<body>
+    
+    <div id="container"></div>
+        <canvas id='grid'></canvas>
+        <p id=instructions class='fade-out'><strong>Celluar Automata.</strong><br>
+            Click and drag to turn on cells.<br>
+            Press spacebar to iterate.<br>
+            Press 'm' to see the options menu.</p>
+        <form id=user_form>
+            <label for="back_colour">Background:</label>
+                <input type="color" class="colour_input" id="back_colour" name="back_colour" value="#AE00FF">
+            <label for="line_colour">Grid Lines:</label>
+                <input type="color" class="colour_input" id="line_colour" name="line_colour" value="#FFFFFF">
+            <label for="cell_colour">Cell:</label>
+                <input type="color" class="colour_input" id="cell_colour" name="cell_colour" value="#00FF00">
+
+            <label for="cell_size">Cell Size:</label>
+                <input type="number" name="cell_size" id="cell_size" size="4" value="7">
+            <label for="grid_width">Grid Width:</label>
+                <input type="number" name="grid_width" id="grid_width"size="4">
+            <label for="grid_height">Grid Height:</label>
+                <input type="number" name="grid_height" id="grid_height" size="4">
+
+            <button type="button" id="reset">Reset</button>
+            <button type="button" id="random">Randomise</button>
+            <button type="button" id="play">Play</button>
+            <button type="button" id="step">Step</button>
+            
+            <div id="rule_list">
+                <div id="birth" class="rules">
+                    <div id="birth_label">Birth:</div>
+                        <button type="button" id="birth_1" class="birth rule" value="0">1</button>
+                        <button type="button" id="birth_2" class="birth rule" value="0">2</button>
+                        <button type="button" id="birth_3" class="birth rule" value="0">3</button>
+                        <button type="button" id="birth_4" class="birth rule" value="0">4</button>
+                        <button type="button" id="birth_5" class="birth rule" value="0">5</button>
+                        <button type="button" id="birth_6" class="birth rule" value="0">6</button>
+                        <button type="button" id="birth_7" class="birth rule" value="0">7</button>
+                        <button type="button" id="birth_8" class="birth rule" value="0">8</button>
+                </div>
+                <div id="survive" class="rules">
+                    <div id="survive_label">Survive:</div> 
+                        <button type="button" id="survive_1" class="survive rule" value="0">1</button>
+                        <button type="button" id="survive_2" class="survive rule" value="0">2</button>
+                        <button type="button" id="survive_3" class="survive rule" value="0">3</button>
+                        <button type="button" id="survive_4" class="survive rule" value="0">4</button>
+                        <button type="button" id="survive_5" class="survive rule" value="0">5</button>
+                        <button type="button" id="survive_6" class="survive rule" value="0">6</button>
+                        <button type="button" id="survive_7" class="survive rule" value="0">7</button>
+                        <button type="button" id="survive_8" class="survive rule" value="0">8</button>
+                </div>
+            </div>
+            <button type="button" id="conway" class="rule_button">Conway</button>
+        </form>
+
+    </div>
+
+    <script src='conway2.js'></script>
+</body>
+
+</html>
